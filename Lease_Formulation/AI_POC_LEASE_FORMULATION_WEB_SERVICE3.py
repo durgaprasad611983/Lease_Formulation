@@ -450,10 +450,10 @@ from Data_Provider2 import vAR_Model_Run_Lease_Amount_YD
 from Data_Provider2 import vAR_Model_Outcome_Lease_Amount_YD
 
 from flask import Flask, request
-from sklearn.model_selection import cross_val_predict
+#from sklearn.model_selection import cross_val_predict
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as vAR_plt
+#import matplotlib.pyplot as vAR_plt
 
 app = Flask(__name__)
 
@@ -474,15 +474,15 @@ def run_model():
 
     # Function for Model Validation
 
-        #from sklearn.model_selection import cross_val_predict
+        ##from sklearn.model_selection import cross_val_predict
         #from sklearn.linear_model import LinearRegression
-        #import matplotlib.pyplot as vAR_plt
+        ##import matplotlib.pyplot as vAR_plt
         #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train, vAR_Label_Train , cv=5)
-        #vAR_fig, vAR_ax = vAR_plt.subplots()
-        #vAR_ax.scatter(vAR_Label_Train, vAR_Predicted, edgecolors=(0, 0, 0))
-        #vAR_ax.plot([vAR_Label_Train.min(), vAR_Label_Train.max()], [vAR_Label_Train.min(), vAR_Label_Train.max()], 'k--', lw=4)
-        #vAR_ax.set_xlabel('Actual Unplanned Expenses')
-        #vAR_ax.set_ylabel('Predicted Unplanned Expenses')
+        ##vAR_fig, vAR_ax = vAR_plt.subplots()
+        ##vAR_ax.scatter(vAR_Label_Train, vAR_Predicted, edgecolors=(0, 0, 0))
+        ##vAR_ax.plot([vAR_Label_Train.min(), vAR_Label_Train.max()], [vAR_Label_Train.min(), vAR_Label_Train.max()], 'k--', lw=4)
+        ##vAR_ax.set_xlabel('Actual Unplanned Expenses')
+        ##vAR_ax.set_ylabel('Predicted Unplanned Expenses')
         ##vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>            
@@ -526,7 +526,7 @@ def run_model():
     # Function for Model Best Fit
 
         #import matplotlib.pyplot as vAR_plt
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train_UC_BF, vAR_Labels_Pred_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
         #vAR_ax.plot([vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
@@ -537,7 +537,7 @@ def run_model():
     # Function for Model Under Fit
 
         #import matplotlib.pyplot as vAR_plt
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train_UC_UF, vAR_Labels_Pred_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
         #vAR_ax.plot([vAR_Labels_Pred_UC_UF.min(), vAR_Labels_Pred_UC_UF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
@@ -548,7 +548,7 @@ def run_model():
     # Function for Model Over Fit
 
         #import matplotlib.pyplot as vAR_plt
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train_UC_OF, vAR_Labels_Pred_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
         #vAR_ax.plot([vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()], [vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()])
@@ -559,7 +559,7 @@ def run_model():
     # Function for Model Hyperparameter Tuning (Before)
 
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LinearRegression()
+        vAR_model = LinearRegression()
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
         #vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
@@ -570,7 +570,7 @@ def run_model():
     # Function for Model Hyperparameter Tuning (After)
 
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LinearRegression(fit_intercept=False, normalize=True, copy_X=False, n_jobs=5)
+        vAR_model = LinearRegression(fit_intercept=False, normalize=True, copy_X=False, n_jobs=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
         #vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
@@ -586,23 +586,23 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LogisticRegression
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LogisticRegression()
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2, cv=2)
+        vAR_model = LogisticRegression()
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2, cv=2)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=2)
         #vAR_ax.set_xlabel('Actual Lease Extension')
         #vAR_ax.set_ylabel('Planned Lease Extension')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=5)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=4)
         #vAR_ax.set_xlabel('Actual Lease Extension')
         #vAR_ax.set_ylabel('Planned Lease Extension')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=10)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=10)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=6)
@@ -648,22 +648,22 @@ def run_model():
     # Function for Validating the Model
 
         #from sklearn.model_selection import cross_val_predict
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LinearRegression()
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=2)
+        vAR_model = LinearRegression()
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=2)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=2)
         #vAR_ax.set_xlabel('Actual Extension Term')
         #vAR_ax.set_ylabel('Predicted Extension Term')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=5)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=4)
         #vAR_ax.set_xlabel('Actual Extension Term')
         #vAR_ax.set_ylabel('Predicted Extension Term')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=10)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=10)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=6)
@@ -711,22 +711,22 @@ def run_model():
     # Function for Validating the Model
 
         #from sklearn.model_selection import cross_val_predict
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LinearRegression()
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=2)
+        vAR_model = LinearRegression()
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=2)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=2)
         #vAR_ax.set_xlabel('Actual IBR')
         #vAR_ax.set_ylabel('Predicted IBR')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=5)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=4)
         #vAR_ax.set_xlabel('Actual IBR')
         #vAR_ax.set_ylabel('Predicted IBR')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=10)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=10)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=6)
@@ -755,7 +755,7 @@ def run_model():
         vAR_df_IBR = vAR_df_IBR.loc[vAR_df_IBR['Predicted_Lease_Extension'] == 1]
         vAR_df_IBR1 = vAR_df_IBR.merge(vAR_Labels_Pred3,left_index=True, right_index=True)
         vAR_df_IBR2 = vAR_df_IBR1.to_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
-        #vAR_df_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)##
+        vAR_df_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
 
         vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
@@ -774,22 +774,22 @@ def run_model():
     # Function for Validating the Model
 
         #from sklearn.model_selection import cross_val_predict
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #import matplotlib.pyplot as vAR_plt
-        #vAR_model = LinearRegression()
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=2)
+        vAR_model = LinearRegression()
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=2)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=2)
         #vAR_ax.set_xlabel('Actual Lease Amount')
         #vAR_ax.set_ylabel('Predicted Lease Amount')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=5)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=4)
         #vAR_ax.set_xlabel('Actual Lease Amount')
         #vAR_ax.set_ylabel('Predicted Lease Amount')
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=10)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=10)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=6)
@@ -840,9 +840,9 @@ def run_model():
     # Function for Model Validation
 
         #from sklearn.model_selection import cross_val_predict
-        #from sklearn.linear_model import LinearRegression
+        from sklearn.linear_model import LinearRegression
         #import matplotlib.pyplot as vAR_plt
-        #vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train_YD, vAR_Label_Train_YD , cv=5)
+        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train_YD, vAR_Label_Train_YD , cv=5)
         #vAR_fig, vAR_ax = vAR_plt.subplots()
         #vAR_ax.scatter(vAR_Label_Train_YD, vAR_Predicted, edgecolors=(0, 0, 0))
         #vAR_ax.plot([vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], [vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], 'k--', lw=4)
@@ -890,56 +890,56 @@ def run_model():
 
     # Function for Model Best Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_BF, vAR_Labels_Pred_YD_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_BF, vAR_Labels_Pred_YD_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Under Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_UF, vAR_Labels_Pred_YD_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_UF.min(), vAR_Labels_Pred_YD_UC_UF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_UF, vAR_Labels_Pred_YD_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_UF.min(), vAR_Labels_Pred_YD_UC_UF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Over Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_OF, vAR_Labels_Pred_YD_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()], [vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_OF, vAR_Labels_Pred_YD_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()], [vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Hyperparameter Tuning (Before)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                            
 
     # Function for Model Hyperparameter Tuning (After)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression(fit_intercept=False, normalize=True, copy_X=False, n_jobs=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 
@@ -951,28 +951,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LogisticRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LogisticRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         ##plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1012,28 +1012,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1075,28 +1075,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1138,28 +1138,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1204,15 +1204,15 @@ def run_model():
 
     # Function for Model Validation
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train, vAR_Label_Train , cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train.min(), vAR_Label_Train.max()], [vAR_Label_Train.min(), vAR_Label_Train.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Unplanned Expenses')
-        vAR_ax.set_ylabel('Predicted Unplanned Expenses')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train.min(), vAR_Label_Train.max()], [vAR_Label_Train.min(), vAR_Label_Train.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Unplanned Expenses')
+        #vAR_ax.set_ylabel('Predicted Unplanned Expenses')
         ##vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>            
@@ -1256,56 +1256,56 @@ def run_model():
 
     # Function for Model Best Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_UC_BF, vAR_Labels_Pred_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_UC_BF, vAR_Labels_Pred_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Under Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_UC_UF, vAR_Labels_Pred_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_UC_UF.min(), vAR_Labels_Pred_UC_UF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_UC_UF, vAR_Labels_Pred_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_UC_UF.min(), vAR_Labels_Pred_UC_UF.max()], [vAR_Labels_Pred_UC_BF.min(), vAR_Labels_Pred_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Over Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_UC_OF, vAR_Labels_Pred_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()], [vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_UC_OF, vAR_Labels_Pred_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()], [vAR_Labels_Pred_UC_OF.min(), vAR_Labels_Pred_UC_OF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Hyperparameter Tuning (Before)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                            
 
     # Function for Model Hyperparameter Tuning (After)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression(fit_intercept=False, normalize=True, copy_X=False, n_jobs=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1, vAR_Labels_Pred, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred.min(), vAR_Labels_Pred.max()], [vAR_Labels_Pred.min(), vAR_Labels_Pred.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                            
 
@@ -1319,28 +1319,28 @@ def run_model():
 
     # Function for Validating the Model
 
-       from sklearn.model_selection import cross_val_predict
+       #from sklearn.model_selection import cross_val_predict
        from sklearn.linear_model import LogisticRegression
-       import matplotlib.pyplot as vAR_plt
+       #import matplotlib.pyplot as vAR_plt
        vAR_model = LogisticRegression()
        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2, cv=2)
-       vAR_fig, vAR_ax = vAR_plt.subplots()
-       vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
-       vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=2)
-       vAR_ax.set_xlabel('Actual Lease Extension')
-       vAR_ax.set_ylabel('Planned Lease Extension')
+       #vAR_fig, vAR_ax = vAR_plt.subplots()
+       #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
+       #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=2)
+       #vAR_ax.set_xlabel('Actual Lease Extension')
+       #vAR_ax.set_ylabel('Planned Lease Extension')
        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=5)
-       vAR_fig, vAR_ax = vAR_plt.subplots()
-       vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
-       vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=4)
-       vAR_ax.set_xlabel('Actual Lease Extension')
-       vAR_ax.set_ylabel('Planned Lease Extension')
+       #vAR_fig, vAR_ax = vAR_plt.subplots()
+       #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
+       #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=4)
+       #vAR_ax.set_xlabel('Actual Lease Extension')
+       #vAR_ax.set_ylabel('Planned Lease Extension')
        vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2, vAR_Label_Train2 , cv=10)
-       vAR_fig, vAR_ax = vAR_plt.subplots()
-       vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
-       vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=6)
-       vAR_ax.set_xlabel('Actual Lease Extension')
-       vAR_ax.set_ylabel('Planned Lease Extension')
+       #vAR_fig, vAR_ax = vAR_plt.subplots()
+       #vAR_ax.scatter(vAR_Label_Train2, vAR_Predicted, edgecolors=(0, 0, 0))
+       #vAR_ax.plot([vAR_Label_Train2.min(), vAR_Label_Train2.max()], [vAR_Label_Train2.min(), vAR_Label_Train2.max()], 'k--', lw=6)
+       #vAR_ax.set_xlabel('Actual Lease Extension')
+       #vAR_ax.set_ylabel('Planned Lease Extension')
        ##plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1384,28 +1384,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3, vAR_Label_Train3, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3.min(), vAR_Label_Train3.max()], [vAR_Label_Train3.min(), vAR_Label_Train3.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1451,28 +1451,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4, vAR_Label_Train4, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4.min(), vAR_Label_Train4.max()], [vAR_Label_Train4.min(), vAR_Label_Train4.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1518,28 +1518,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5, vAR_Label_Train5, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5.min(), vAR_Label_Train5.max()], [vAR_Label_Train5.min(), vAR_Label_Train5.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1585,15 +1585,15 @@ def run_model():
 
     # Function for Model Validation
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train_YD, vAR_Label_Train_YD , cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], [vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Unplanned Expenses')
-        vAR_ax.set_ylabel('Predicted Unplanned Expenses')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], [vAR_Label_Train_YD.min(), vAR_Label_Train_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Unplanned Expenses')
+        #vAR_ax.set_ylabel('Predicted Unplanned Expenses')
         ##vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>            
@@ -1637,56 +1637,56 @@ def run_model():
 
     # Function for Model Best Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_BF, vAR_Labels_Pred_YD_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_BF, vAR_Labels_Pred_YD_UC_BF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Under Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_UF, vAR_Labels_Pred_YD_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_UF.min(), vAR_Labels_Pred_YD_UC_UF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_UF, vAR_Labels_Pred_YD_UC_UF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_UF.min(), vAR_Labels_Pred_YD_UC_UF.max()], [vAR_Labels_Pred_YD_UC_BF.min(), vAR_Labels_Pred_YD_UC_BF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Over Fit
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         from sklearn.linear_model import LinearRegression
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train_YD_UC_OF, vAR_Labels_Pred_YD_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
-        vAR_ax.plot([vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()], [vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()])
-        #vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train_YD_UC_OF, vAR_Labels_Pred_YD_UC_OF, edgecolors=(0, 0, 0), s=50, c='g')
+        #vAR_ax.plot([vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()], [vAR_Labels_Pred_YD_UC_OF.min(), vAR_Labels_Pred_YD_UC_OF.max()])
+        ##vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     # Function for Model Hyperparameter Tuning (Before)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                            
 
     # Function for Model Hyperparameter Tuning (After)
 
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression(fit_intercept=False, normalize=True, copy_X=False, n_jobs=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
-        vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
-        vAR_ax.plot()
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train1_YD, vAR_Labels_Pred_YD, edgecolors=(0, 0, 0), s=50, c='gbc')
+        #vAR_ax.plot([vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()], [vAR_Labels_Pred_YD.min(), vAR_Labels_Pred_YD.max()])
+        #vAR_ax.plot()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 
@@ -1700,28 +1700,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LogisticRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LogisticRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train2_YD, vAR_Label_Train2_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Lease Extension')
-        vAR_ax.set_ylabel('Planned Lease Extension')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train2_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], [vAR_Label_Train2_YD.min(), vAR_Label_Train2_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Lease Extension')
+        #vAR_ax.set_ylabel('Planned Lease Extension')
         ##plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1765,28 +1765,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train3_YD, vAR_Label_Train3_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Extension Term')
-        vAR_ax.set_ylabel('Predicted Extension Term')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train3_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], [vAR_Label_Train3_YD.min(), vAR_Label_Train3_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Extension Term')
+        #vAR_ax.set_ylabel('Predicted Extension Term')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1832,28 +1832,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train4_YD, vAR_Label_Train4_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual IBR')
-        vAR_ax.set_ylabel('Predicted IBR')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train4_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], [vAR_Label_Train4_YD.min(), vAR_Label_Train4_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual IBR')
+        #vAR_ax.set_ylabel('Predicted IBR')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1899,28 +1899,28 @@ def run_model():
 
     # Function for Validating the Model
 
-        from sklearn.model_selection import cross_val_predict
+        #from sklearn.model_selection import cross_val_predict
         from sklearn.linear_model import LinearRegression
-        import matplotlib.pyplot as vAR_plt
+        #import matplotlib.pyplot as vAR_plt
         vAR_model = LinearRegression()
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=2)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=2)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=2)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=5)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=4)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=4)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         vAR_Predicted = cross_val_predict(vAR_model, vAR_Features_Train5_YD, vAR_Label_Train5_YD, cv=10)
-        vAR_fig, vAR_ax = vAR_plt.subplots()
-        vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
-        vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=6)
-        vAR_ax.set_xlabel('Actual Lease Amount')
-        vAR_ax.set_ylabel('Predicted Lease Amount')
+        #vAR_fig, vAR_ax = vAR_plt.subplots()
+        #vAR_ax.scatter(vAR_Label_Train5_YD, vAR_Predicted, edgecolors=(0, 0, 0))
+        #vAR_ax.plot([vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], [vAR_Label_Train5_YD.min(), vAR_Label_Train5_YD.max()], 'k--', lw=6)
+        #vAR_ax.set_xlabel('Actual Lease Amount')
+        #vAR_ax.set_ylabel('Predicted Lease Amount')
         #vAR_plt.show()
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
