@@ -1,7 +1,5 @@
 #!/opt/conda/bin/python
 
-pip install configparser
-pip install pypyodbc
 import configparser
 vAR_Config = configparser.ConfigParser(allow_no_value=True)
 vAR_Config.read('/opt/conda/bin/Lease_Formulation/Lease_Formulation/Lease_Formulation/DS_LEASE_ACCOUNTING_MODEL_CONS_INI_FILE1.INI')
