@@ -515,7 +515,7 @@ def run_model():
 
         vAR_df_UC4 = vAR_df_UC3[[vAR_Fetched_Feature1,vAR_Fetched_Feature2,vAR_Fetched_Feature3,vAR_Fetched_Feature4,vAR_Fetched_Feature5,vAR_Fetched_Feature6,vAR_Fetched_Feature7,vAR_Fetched_Feature8,vAR_Fetched_Feature9,vAR_Fetched_Feature10,'Predicted_Unplanned_Charges']]    
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -631,7 +631,7 @@ def run_model():
         vAR_df_LE2 = vAR_df_LE1.to_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
         vAR_df_LE3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -694,7 +694,7 @@ def run_model():
         vAR_df_ET2 = vAR_df_ET1.to_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_df_ET3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -757,7 +757,7 @@ def run_model():
         vAR_df_IBR2 = vAR_df_IBR1.to_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_df_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -880,7 +880,7 @@ def run_model():
 
         vAR_DF_UC4 = vAR_DF_UC3[[vAR_Fetched_Feature1,vAR_Fetched_Feature2,vAR_Fetched_Feature3,vAR_Fetched_Feature4,vAR_Fetched_Feature5,vAR_Fetched_Feature6,vAR_Fetched_Feature7,vAR_Fetched_Feature8,vAR_Fetched_Feature9,vAR_Fetched_Feature10,'Predicted_Unplanned_Charges']]    
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -996,7 +996,7 @@ def run_model():
         vAR_DF_LE2 = vAR_DF_LE1.to_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_DF_LE3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1059,7 +1059,7 @@ def run_model():
         vAR_DF_ET2 = vAR_DF_ET1.to_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_DF_ET3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1122,7 +1122,7 @@ def run_model():
         vAR_DF_IBR2 = vAR_DF_IBR1.to_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_DF_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1246,7 +1246,7 @@ def run_model():
         vAR_df_UC4 = vAR_df_UC3[[vAR_Fetched_Feature1,vAR_Fetched_Feature2,vAR_Fetched_Feature3,vAR_Fetched_Feature4,vAR_Fetched_Feature5,vAR_Fetched_Feature6,vAR_Fetched_Feature7,vAR_Fetched_Feature8,vAR_Fetched_Feature9,vAR_Fetched_Feature10,'Predicted_Unplanned_Charges']]    
 
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1364,7 +1364,7 @@ def run_model():
        vAR_df_LE2 = vAR_df_LE1.to_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
        vAR_df_LE3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
 
-       vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
+       vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
        vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
        vAR_response = urllib.request.urlopen(vAR_url)
@@ -1431,7 +1431,7 @@ def run_model():
         vAR_df_ET2 = vAR_df_ET1.to_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_df_ET3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1498,7 +1498,7 @@ def run_model():
         vAR_df_IBR2 = vAR_df_IBR1.to_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_df_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1626,7 +1626,7 @@ def run_model():
 
         vAR_DF_UC4 = vAR_DF_UC3[[vAR_Fetched_Feature1,vAR_Fetched_Feature2,vAR_Fetched_Feature3,vAR_Fetched_Feature4,vAR_Fetched_Feature5,vAR_Fetched_Feature6,vAR_Fetched_Feature7,vAR_Fetched_Feature8,vAR_Fetched_Feature9,vAR_Fetched_Feature10,'Predicted_Unplanned_Charges']]    
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1745,7 +1745,7 @@ def run_model():
         vAR_DF_LE2 = vAR_DF_LE1.to_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_DF_LE3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1812,7 +1812,7 @@ def run_model():
         vAR_DF_ET2 = vAR_DF_ET1.to_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_DF_ET3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1879,7 +1879,7 @@ def run_model():
         vAR_DF_IBR2 = vAR_DF_IBR1.to_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_DF_IBR3 = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
@@ -1946,7 +1946,7 @@ def run_model():
         vAR_DF_LA2 = vAR_DF_LA1.to_excel(vAR_Fetched_Path_Predicted_Lease_Amount_YD)
         vAR_DF_LA3 = vAR_pd.read_excel(vAR_Fetched_Path_Predicted_Lease_Amount_OD)
 
-        vAR_data = pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
+        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
         vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
         vAR_response = urllib.request.urlopen(vAR_url)
