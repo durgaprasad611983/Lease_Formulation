@@ -119,13 +119,13 @@ vAR_Fetched_Path_Data_Provider = vAR_Config['PROBLEM1 CONFIGURATION']['DATA_PROV
 vAR_Fetched_Path_Preview_Outcome_json_Data_OD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_PATH_OD']
 #print(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
 
-vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_URL_OD']
+#vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_URL_OD']
 #print(vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD)
 
 vAR_Fetched_Path_Preview_Outcome_json_Data_YD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_PATH_YD']
 #print(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
 
-vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_URL_YD']
+#vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD = vAR_Config['PROBLEM1 CONFIGURATION']['PREVIEW_OUTCOME_JSON_DATA_URL_YD']
 #print(vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD)
 
 vAR_File_Name_Our_Data = vAR_Config['PROBLEM1 CONFIGURATION']['FILE_NAME_OUR_DATA']
@@ -517,9 +517,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -633,9 +633,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -696,9 +696,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -759,9 +759,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -822,9 +822,9 @@ def run_model():
                
         vAR_data = pd.read_excel(vAR_Fetched_Path_Predicted_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())  
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())  
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -882,9 +882,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -998,9 +998,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1061,9 +1061,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1124,9 +1124,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1187,9 +1187,9 @@ def run_model():
 
         vAR_data = pd.read_excel(vAR_Fetched_Path_Predicted_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
   
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1248,9 +1248,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1366,9 +1366,9 @@ def run_model():
 
        vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_OD)
        vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-       vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-       vAR_response = urllib.request.urlopen(vAR_url)
-       vAR_data = json.loads(vAR_response.read())
+       #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+       #vAR_response = urllib.request.urlopen(vAR_url)
+       #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                          
 
@@ -1433,9 +1433,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1500,9 +1500,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1567,9 +1567,9 @@ def run_model():
 
         vAR_data = pd.read_excel(vAR_Fetched_Path_Predicted_Lease_Amount_OD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_OD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_OD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>           
 
@@ -1628,9 +1628,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Extension_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
         
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1747,9 +1747,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Extension_Terms_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1814,9 +1814,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_IBR_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1881,9 +1881,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -1948,9 +1948,9 @@ def run_model():
 
         vAR_data = vAR_pd.read_excel(vAR_Fetched_Path_Test_Lease_Amount_YD)
         vAR_data_json = vAR_data.to_json(vAR_Fetched_Path_Preview_Outcome_json_Data_YD)
-        vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
-        vAR_response = urllib.request.urlopen(vAR_url)
-        vAR_data = json.loads(vAR_response.read())
+        #vAR_url = vAR_Fetched_Path_Preview_Outcome_json_Data_URL_YD
+        #vAR_response = urllib.request.urlopen(vAR_url)
+        #vAR_data = json.loads(vAR_response.read())
 
     else:
          print("Model not Run")
